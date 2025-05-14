@@ -46,12 +46,17 @@ nav a {
 
 .section {
   padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .section h2 {
   font-size: 28px;
   color: #004aad;
   margin-bottom: 20px;
+}
+
+.center-text h2, .center-text p {
   text-align: center;
 }
 
@@ -115,8 +120,10 @@ nav a {
   <li>Гурманские</li>
 </ul>
 
-<h2 id="company-info">Информация о компании ZÉVA</h2>
-<p style="text-align: center;"><em>Информация будет добавлена позже.</em></p>
+<div class="center-text">
+  <h2 id="company-info">Информация о компании ZÉVA</h2>
+  <p><em>Информация будет добавлена позже.</em></p>
+</div>
 
   </div>  <div class="footer">
     <div class="footer-logo" onclick="scrollToInfo()">ZÉVA</div>
