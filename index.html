@@ -17,11 +17,12 @@
       top: 0;
       width: 100%;
       background-color: #004aad;
-      padding: 20px 40px;
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
+      box-sizing: border-box;
     }
 
     .logo {
@@ -31,25 +32,35 @@
       cursor: pointer;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     nav a {
       color: white;
-      margin-left: 25px;
+      margin-left: 20px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
+      white-space: nowrap;
     }
 
     .spacer {
-      height: 100px; /* Навбар биіктігімен тең болу керек */
+      height: 80px;
     }
 
     .section {
-      padding: 60px 40px;
+      padding: 60px 20px;
     }
 
     .section h2 {
       font-size: 28px;
       color: #004aad;
       margin-bottom: 20px;
+    }
+
+    .centered {
+      text-align: center;
     }
 
     .footer-logo {
@@ -65,6 +76,24 @@
     .footer {
       margin-top: 60px;
     }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -79,7 +108,7 @@
 
   <div class="spacer"></div>
 
-  <div class="section" id="about">
+  <div class="section">
     <h2>О парфюме</h2>
     <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
     <p><strong>Существует 4 основных типа ароматов:</strong></p>
@@ -112,8 +141,8 @@
       <li>Гурманские</li>
     </ul>
 
-    <h2 id="company-info">Информация о компании ZÉVA</h2>
-    <p><em>Информация будет добавлена позже.</em></p>
+    <h2 id="company-info" class="centered">Информация о компании ZÉVA</h2>
+    <p class="centered"><em>Информация будет добавлена позже.</em></p>
   </div>
 
   <div class="footer">
@@ -122,7 +151,7 @@
 
   <script>
     function scrollToInfo() {
-      document.getElementById("company-info").scrollIntoView({behavior: "smooth"});
+      document.getElementById("company-info").scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
