@@ -5,123 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZÉVA</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #ffffff;
       color: #000;
     }
 
     header {
-      background-color: #003366;
-      color: white;
-      padding: 15px 30px;
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      z-index: 999;
+      background-color: #004aad;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 1000;
+      box-sizing: border-box;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: bold;
+      color: white;
+      cursor: pointer;
     }
 
     nav {
       display: flex;
-      gap: 20px;
+      gap: 30px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 120px 30px 50px;
+    .spacer {
+      height: 90px;
     }
 
     .section {
-      margin-bottom: 40px;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      color: #004aad;
+      margin-bottom: 20px;
     }
 
-    .section p, ul {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    footer {
-      background-color: #003366;
-      color: white;
+    .center-text h2, .center-text p {
       text-align: center;
-      padding: 15px 20px;
     }
 
-    .footer-link {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
+    .footer-logo {
+      text-align: center;
+      padding: 50px 0;
+      font-size: 28px;
+      font-weight: bold;
+      color: #004aad;
+      cursor: pointer;
+      border-top: 1px solid #ccc;
     }
 
-    .footer-link:hover {
+    .footer {
+      margin-top: 60px;
+    }
+
+    a.sub-link {
+      color: #004aad;
       text-decoration: underline;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo"><a href="#" style="color: white; text-decoration: none;">ZÉVA</a></div>
+    <div class="logo" onclick="scrollToInfo()">ZÉVA</div>
     <nav>
-      <a href="#">Главный</a>
-      <a href="#">Регистрация</a>
+      <a href="index.html">Главная</a>
+      <a href="registration.html">Регистрация</a>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="section" style="text-align: left;">
-      <h2>О парфюме</h2>
-      <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
-      <p>Существует 4 основных типа ароматов:</p>
-      <ul>
-        <li><strong>Parfum (Экстракт)</strong> — самый стойкий (20–30% ароматических веществ).</li>
-        <li><strong>Eau de Parfum (EDP)</strong> — популярный вариант на каждый день (15–20%).</li>
-        <li><strong>Eau de Toilette (EDT)</strong> — лёгкий, свежий аромат (5–15%).</li>
-        <li><strong>Eau de Cologne (EDC)</strong> — очень лёгкий, держится недолго (2–5%).</li>
-      </ul>
-    </div>
+  <div class="spacer"></div>
 
-    <div class="section" style="text-align: left;">
-      <h2><a href="aromaty-po-sezonam.html">ароматы по сезонам</a></h2>
-    </div>
+  <div class="section">
+    <h2>О парфюме</h2>
+    <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
+    <p><a class="sub-link" href="tipy-aromatov.html">Существует 4 основных типа ароматов</a></p>
 
-    <div class="section" style="text-align: left;">
-      <h2><a href="gruppy-aromatov.html">основные группы ароматов</a></h2>
+    <h2><a class="sub-link" href="sezony-aromatov.html">Ароматы по сезонам</a></h2>
+
+    <h2><a class="sub-link" href="gruppy-aromatov.html">Основные группы ароматов</a></h2>
+
+    <div class="center-text">
+      <h2 id="company-info">Информация о компании ZÉVA</h2>
+      <p><em>Информация будет добавлена позже.</em></p>
     </div>
   </div>
 
-  <footer>
-    <a href="kompaniya.html" class="footer-link">Информация о компании</a>
-  </footer>
+  <div class="footer">
+    <div class="footer-logo" onclick="scrollToInfo()">ZÉVA</div>
+  </div>
+
+  <script>
+    function scrollToInfo() {
+      document.getElementById("company-info").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 
 </body>
 </html>
