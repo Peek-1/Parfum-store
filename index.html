@@ -1,132 +1,94 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZÉVA</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000;
+      background-color: white;
     }
-
-    header {
+    .navbar {
+      background-color: #004AAD;
+      color: white;
+      padding: 15px 20px;
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #004aad;
-      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      box-sizing: border-box;
     }
-
-    .logo {
-      font-size: 32px;
+    .navbar-left {
+      font-size: 1.5em;
       font-weight: bold;
-      color: white;
       cursor: pointer;
     }
-
-    nav {
-      display: flex;
-      gap: 30px;
-    }
-
-    nav a {
+    .navbar-right a {
       color: white;
       text-decoration: none;
-      font-size: 18px;
+      margin-left: 20px;
+      font-size: 1em;
     }
-
-    .spacer {
-      height: 90px;
+    .video-container {
+      margin-top: 70px;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
     }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
-    .section h2 {
-      font-size: 28px;
-      color: #004aad;
-      margin-bottom: 20px;
+    .content {
+      padding: 40px 20px;
     }
-
-    .center-text h2, .center-text p {
+    .info-block {
       text-align: center;
-    }
-
-    .footer-logo {
-      text-align: center;
-      padding: 50px 0;
-      font-size: 28px;
+      font-size: 1.2em;
+      margin-bottom: 40px;
       font-weight: bold;
-      color: #004aad;
-      cursor: pointer;
-      border-top: 1px solid #ccc;
     }
-
+    .links-block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 700px;
+      margin-left: 20px;
+      font-size: 1.1em;
+    }
     .footer {
-      margin-top: 60px;
-    }
-
-    a.sub-link {
-      color: #004aad;
-      text-decoration: underline;
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+      font-size: 1.3em;
+      font-weight: bold;
       cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="logo" onclick="scrollToInfo()">ZÉVA</div>
-    <nav>
-      <a href="index.html">Главная</a>
+  <div class="navbar">
+    <div class="navbar-left" onclick="scrollToInfo()">ZÉVA</div>
+    <div class="navbar-right">
+      <a href="#">Главный</a>
       <a href="registration.html">Регистрация</a>
-    </nav>
-  </header>
-
-  <div class="spacer"></div>
-
-  <div class="section">
-    <h2>О парфюме</h2>
-    <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
-    <p><a class="sub-link" href="tipy-aromatov.html">Существует 4 основных типа ароматов</a></p>
-
-    <h2><a class="sub-link" href="sezony-aromatov.html">Ароматы по сезонам</a></h2>
-
-    <h2><a class="sub-link" href="gruppy-aromatov.html">Основные группы ароматов</a></h2>
-
-    <div class="center-text">
-      <h2 id="company-info">Информация о компании ZÉVA</h2>
-      <p><em>Информация будет добавлена позже.</em></p>
     </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-logo" onclick="scrollToInfo()">ZÉVA</div>
-  </div>
-
-  <script>
+  </div>  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/xzjDcPj2n04?autoplay=1&mute=1&loop=1&playlist=xzjDcPj2n04" frameborder="0" allowfullscreen></iframe>
+  </div>  <div class="content">
+    <div class="info-block" id="company-info">Информация о компании</div>
+    <div class="links-block">
+      <a href="tipy-aromatov.html">Существует 4 основных типа ароматов</a>
+      <a href="sezony-aromatov.html">ароматы по сезонам</a>
+      <a href="gruppy-aromatov.html">основные группы ароматов</a>
+    </div>
+  </div>  <div class="footer" onclick="scrollToInfo()">ZÉVA</div>  <script>
     function scrollToInfo() {
-      document.getElementById("company-info").scrollIntoView({ behavior: "smooth" });
+      document.getElementById('company-info').scrollIntoView({ behavior: 'smooth' });
     }
-  </script>
-
-</body>
+  </script></body>
 </html>
