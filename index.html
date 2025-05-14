@@ -1,127 +1,102 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZÉVA Parfum</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZÉVA</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: white;
+      background-color: #ffffff;
       color: #000;
     }
     header {
       background-color: #004aad;
-      color: white;
-      padding: 15px 30px;
-      position: sticky;
-      top: 0;
+      padding: 25px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 1000;
+    }
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
     }
     nav a {
       color: white;
-      margin-left: 20px;
+      margin-left: 25px;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 18px;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .section {
+      padding: 60px 40px;
     }
-    section.hero {
+    .section h2 {
+      font-size: 28px;
+      color: #004aad;
+      margin-bottom: 20px;
+    }
+    .footer-logo {
       text-align: center;
-      padding: 40px;
-    }
-    section.hero video {
-      max-width: 90%;
-      height: auto;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-    .zeva-logo {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      font-size: 24px;
+      padding: 50px 0;
+      font-size: 30px;
       font-weight: bold;
-      color: black;
+      color: #004aad;
       cursor: pointer;
-    }
-    section.products {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 50px;
-      background-color: #f9f9f9;
-      flex-wrap: wrap;
-    }
-    .product-info {
-      width: 55%;
-    }
-    .product-img {
-      width: 40%;
-    }
-    .product-img img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-    ul {
-      padding-left: 20px;
+      border-top: 1px solid #ccc;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div><strong>ZÉVA</strong></div>
+    <div class="logo" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">ZÉVA</div>
     <nav>
-      <a href="#hero">Главная</a>
+      <a href="index.html">Главная</a>
       <a href="registration.html">Регистрация</a>
     </nav>
-  </header>  <section class="hero" id="hero">
-    <h1>Добро пожаловать в ZÉVA</h1>
-    <video autoplay muted loop>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      Ваш браузер не поддерживает видео тег.
-    </video>
-    <div class="zeva-logo" onclick="alert('О нас информация будет позже')">ZÉVA</div>
-  </section>  <section class="products">
-    <div class="product-info">
-      <h2>О парфюме</h2>
-      <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
-      <p><strong>Существует 4 основных типа ароматов:</strong></p>
-      <ul>
-        <li><strong>Parfum (Экстракт)</strong> — самый стойкий (20–30% ароматических веществ).</li>
-        <li><strong>Eau de Parfum (EDP)</strong> — популярный вариант на каждый день (15–20%).</li>
-        <li><strong>Eau de Toilette (EDT)</strong> — лёгкий, свежий аромат (5–15%).</li>
-        <li><strong>Eau de Cologne (EDC)</strong> — очень лёгкий, держится недолго (2–5%).</li>
-      </ul><p><strong>Ароматы по сезонам:</strong></p>
-  <ul>
-    <li>Весна — Цветочные, Зелёные, Свежие.</li>
-    <li>Лето — Цитрусовые, Водные, Лёгкие фруктовые.</li>
-    <li>Осень — Пряные, Восточные, Древесные.</li>
-    <li>Зима — Тяжёлые, Восточные, Сладкие, Тёплые амбровые.</li>
-  </ul>
+  </header>
 
-  <p><strong>Популярные категории парфюмов:</strong></p>
-  <ul>
-    <li>Цветочные</li>
-    <li>Фруктовые</li>
-    <li>Древесные</li>
-    <li>Цитрусовые</li>
-    <li>Пряные</li>
-    <li>Восточные</li>
-    <li>Шипровые</li>
-    <li>Зелёные</li>
-    <li>Водные</li>
-    <li>Амбровые</li>
-  </ul>
-</div>
-<div class="product-img">
-  <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1a5" alt="Парфюм">
-</div>
+  <div class="section" id="about">
+    <h2>О парфюме</h2>
+    <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
+    <p><strong>Существует 4 основных типа ароматов:</strong></p>
+    <ol>
+      <li>Parfum (Экстракт) — самый стойкий (20–30% ароматических веществ).</li>
+      <li>Eau de Parfum (EDP) — популярный вариант на каждый день (15–20%).</li>
+      <li>Eau de Toilette (EDT) — лёгкий, свежий аромат (5–15%).</li>
+      <li>Eau de Cologne (EDC) — очень лёгкий, держится недолго (2–5%).</li>
+    </ol>
 
-  </section>
+    <h2>Какие ароматы подходят по сезонам?</h2>
+    <ul>
+      <li><strong>Весна:</strong> Цветочные, свежие, цитрусовые</li>
+      <li><strong>Лето:</strong> Морские, лёгкие фруктовые, зелёные</li>
+      <li><strong>Осень:</strong> Древесные, пряные, восточные</li>
+      <li><strong>Зима:</strong> Тяжёлые, сладкие, гурманские</li>
+    </ul>
+
+    <h2>Основные группы ароматов:</h2>
+    <ul>
+      <li>Цветочные</li>
+      <li>Фруктовые</li>
+      <li>Цитрусовые</li>
+      <li>Древесные</li>
+      <li>Восточные</li>
+      <li>Пряные</li>
+      <li>Зелёные</li>
+      <li>Морские</li>
+      <li>Кожаные</li>
+      <li>Гурманские</li>
+    </ul>
+  </div>
+
+  <div class="footer-logo" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+    ZÉVA
+  </div>
+
 </body>
 </html>
