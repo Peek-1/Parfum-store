@@ -1,1 +1,95 @@
-
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZÉVA Parfum</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #000;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section.hero {
+      text-align: center;
+      padding: 40px;
+    }
+    section.hero video {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .zeva-logo {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+    }
+    section.products {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    .product-info {
+      width: 50%;
+    }
+    .product-img {
+      width: 40%;
+    }
+    .product-img img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>ZÉVA</strong></div>
+    <nav>
+      <a href="#hero">Главная</a>
+      <a href="registration.html">Регистрация</a>
+    </nav>
+  </header>  <section class="hero" id="hero">
+    <h1>Добро пожаловать в ZÉVA</h1>
+    <video autoplay muted loop>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео тег.
+    </video>
+    <div class="zeva-logo" onclick="alert('О нас информация будет позже')">ZÉVA</div>
+  </section>  <section class="products">
+    <div class="product-info">
+      <h2>Наши парфюмы</h2>
+      <p>Здесь будет информация о различных ароматах, их составе, стойкости и стиле. Позже ты сможешь добавить или изменить тексты.</p>
+    </div>
+    <div class="product-img">
+      <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1a5" alt="Парфюм">
+    </div>
+  </section>
+</body>
+</html>
