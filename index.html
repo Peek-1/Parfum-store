@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,105 +9,82 @@
       font-family: Arial, sans-serif;
       background-color: #ffffff;
       color: #000;
-    }
+    }header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #004aad;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #004aad;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      box-sizing: border-box;
-    }
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: white;
-      cursor: pointer;
-    }
+nav {
+  display: flex;
+  gap: 30px;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
 
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 16px;
-      white-space: nowrap;
-    }
+.spacer {
+  height: 90px;
+}
 
-    .spacer {
-      height: 80px;
-    }
+.section {
+  padding: 60px 20px;
+}
 
-    .section {
-      padding: 60px 20px;
-    }
+.section h2 {
+  font-size: 28px;
+  color: #004aad;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    .section h2 {
-      font-size: 28px;
-      color: #004aad;
-      margin-bottom: 20px;
-    }
+.footer-logo {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #004aad;
+  cursor: pointer;
+  border-top: 1px solid #ccc;
+}
 
-    .centered {
-      text-align: center;
-    }
+.footer {
+  margin-top: 60px;
+}
 
-    .footer-logo {
-      text-align: center;
-      padding: 50px 0;
-      font-size: 28px;
-      font-weight: bold;
-      color: #004aad;
-      cursor: pointer;
-      border-top: 1px solid #ccc;
-    }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
-    .footer {
-      margin-top: 60px;
-    }
-
-    @media (max-width: 480px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav a {
-        margin-left: 0;
-        margin-top: 5px;
-      }
-    }
   </style>
 </head>
-<body>
-
-  <header>
+<body>  <header>
     <div class="logo" onclick="scrollToInfo()">ZÉVA</div>
     <nav>
       <a href="index.html">Главная</a>
       <a href="registration.html">Регистрация</a>
     </nav>
-  </header>
-
-  <div class="spacer"></div>
-
-  <div class="section">
+  </header>  <div class="spacer"></div>  <div class="section">
     <h2>О парфюме</h2>
     <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
     <p><strong>Существует 4 основных типа ароматов:</strong></p>
@@ -117,43 +93,36 @@
       <li>Eau de Parfum (EDP) — популярный вариант на каждый день (15–20%).</li>
       <li>Eau de Toilette (EDT) — лёгкий, свежий аромат (5–15%).</li>
       <li>Eau de Cologne (EDC) — очень лёгкий, держится недолго (2–5%).</li>
-    </ol>
+    </ol><h2>Ароматы по сезонам:</h2>
+<ul>
+  <li><strong>Весна:</strong> Цветочные, свежие, цитрусовые</li>
+  <li><strong>Лето:</strong> Морские, лёгкие фруктовые, зелёные</li>
+  <li><strong>Осень:</strong> Древесные, пряные, восточные</li>
+  <li><strong>Зима:</strong> Тяжёлые, сладкие, гурманские</li>
+</ul>
 
-    <h2>Ароматы по сезонам:</h2>
-    <ul>
-      <li><strong>Весна:</strong> Цветочные, свежие, цитрусовые</li>
-      <li><strong>Лето:</strong> Морские, лёгкие фруктовые, зелёные</li>
-      <li><strong>Осень:</strong> Древесные, пряные, восточные</li>
-      <li><strong>Зима:</strong> Тяжёлые, сладкие, гурманские</li>
-    </ul>
+<h2>Основные группы ароматов:</h2>
+<ul>
+  <li>Цветочные</li>
+  <li>Фруктовые</li>
+  <li>Цитрусовые</li>
+  <li>Древесные</li>
+  <li>Восточные</li>
+  <li>Пряные</li>
+  <li>Зелёные</li>
+  <li>Морские</li>
+  <li>Кожаные</li>
+  <li>Гурманские</li>
+</ul>
 
-    <h2>Основные группы ароматов:</h2>
-    <ul>
-      <li>Цветочные</li>
-      <li>Фруктовые</li>
-      <li>Цитрусовые</li>
-      <li>Древесные</li>
-      <li>Восточные</li>
-      <li>Пряные</li>
-      <li>Зелёные</li>
-      <li>Морские</li>
-      <li>Кожаные</li>
-      <li>Гурманские</li>
-    </ul>
+<h2 id="company-info">Информация о компании ZÉVA</h2>
+<p style="text-align: center;"><em>Информация будет добавлена позже.</em></p>
 
-    <h2 id="company-info" class="centered">Информация о компании ZÉVA</h2>
-    <p class="centered"><em>Информация будет добавлена позже.</em></p>
-  </div>
-
-  <div class="footer">
+  </div>  <div class="footer">
     <div class="footer-logo" onclick="scrollToInfo()">ZÉVA</div>
-  </div>
-
-  <script>
+  </div>  <script>
     function scrollToInfo() {
       document.getElementById("company-info").scrollIntoView({ behavior: "smooth" });
     }
-  </script>
-
-</body>
+  </script></body>
 </html>
