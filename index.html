@@ -80,26 +80,9 @@
     a.sub-link {
       color: #004aad;
       text-decoration: underline;
-      cursor: pointer;
-    }
-
-    .top-links {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .top-links a {
+      font-size: 16px;
       display: inline-block;
-      font-size: 20px;
-      margin: 10px 20px;
-      color: #004aad;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    ul {
-      padding-left: 20px;
-      font-size: 18px;
+      margin-bottom: 10px;
     }
 
     @media (max-width: 768px) {
@@ -125,36 +108,14 @@
   <div class="section">
     <h2>О парфюме</h2>
     <p>Парфюм — это способ выразить себя через аромат. Он состоит из ароматических масел, спирта и воды.</p>
+
     <p><a class="sub-link" href="tipy-aromatov.html">Существует 4 основных типа ароматов</a></p>
     <p><a class="sub-link" href="sezony-aromatov.html">Ароматы по сезонам</a></p>
     <p><a class="sub-link" href="gruppy-aromatov.html">Основные группы ароматов</a></p>
-
-    <div class="top-links">
-      <a onclick="scrollToSection('top-men')">Топ мужские парфюмы 2025 году</a>
-      <a onclick="scrollToSection('top-women')">Топ женские парфюмы 2025 году</a>
-    </div>
-
-    <div id="top-men" style="margin-top: 80px;">
-      <h2>Топ мужские парфюмы 2025</h2>
-      <ul>
-        <li>Dior Sauvage Elixir</li>
-        <li>Bleu de Chanel Parfum</li>
-        <li>Creed Aventus</li>
-        <li>YSL Y Le Parfum</li>
-        <li>Armani Code Parfum</li>
-      </ul>
-    </div>
-
-    <div id="top-women" style="margin-top: 80px;">
-      <h2>Топ женские парфюмы 2025</h2>
-      <ul>
-        <li>Chanel Coco Mademoiselle</li>
-        <li>YSL Libre</li>
-        <li>Maison Francis Kurkdjian Baccarat Rouge 540</li>
-        <li>Dior J'adore</li>
-        <li>Carolina Herrera Good Girl</li>
-      </ul>
-    </div>
+    
+    <!-- Жаңа сілтемелер -->
+    <p><a class="sub-link" href="top-muzhskie.html">Топ мужские парфюмы 2025 году</a></p>
+    <p><a class="sub-link" href="top-zhenskie.html">Топ женские парфюмы 2025 году</a></p>
 
     <div class="center-text" style="margin-top: 100px;">
       <h2 id="company-info">Информация о компании ZÉVA</h2>
@@ -169,10 +130,6 @@
   <script>
     function scrollToInfo() {
       document.getElementById("company-info").scrollIntoView({ behavior: "smooth" });
-    }
-
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
